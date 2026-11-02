@@ -1,0 +1,110 @@
+Write-Host n=== CONNECTION DETAILS (TAILSCALE) ==="
+
+ Write-Host
+
+ Write-Host" ENIGMANO RDP ACCESS
+
+Write-Host"
+
+ Write-Host"|| Host: $env: TAILSCALE_IP
+
+||"
+
+Write-Host"|| Username: runneradmin
+
+ Write-Host"|| Password: P@ssword!
+
+Write-Host "
+
+
+
+Write-Host 'nConnection Instructions:" -ForegroundColom
+
+ Write-Host "1. Install Tailscale on your device (phone,
+
+
+
+Write-Host "2. Log in with the same Tailscale account"
+
+ Write-Host "3. Open Remote Desktop app and enter the IP
+ Write-Host "4. Use the provided credentials" -Foreground
+
+name: Keep Session Alive
+
+run: |
+ Write-Host "`'n=== SESSION ACTIVE ===" -ForegroundColor C
+
+Write-Host "EnigMano RDP instance is now running!" -Fore
+
+03:
+Write-Host "Instance will remain active for up to 6 houm
+Write-Host "Do not close this window to maintain the com
+
+$counter = 0
+while ($true) {
+
+$counter++
+
+Write-Host "Session active Heartbeat #$counter ($(Ge
+$tsStatus = & "C:\Program Files\Tailscale\tailscale.ex
+
+if ($tsStatus -match "active") {
+
+124 Write-Host "Tailscale status: ACTIVE" -ForegroundCo
+
+} else {
+ Write-Host "Tailscale status: ERROR Restarting...'
+
+}
+
+& "C:\Program Files\Tailscale\tailscale.exe" up-au
+
+Start-Sleep -Seconds 60
+}
+Write-Host n=== CONNECTION DETAILS (TAILSCALE) ==="
+Write-Host n=== CONNECTION DETAILS (TAILSCALE) ==="
+Write-Host
+ Write-Host" ENIGMANO RDP ACCESS
+ Write-Host"
+Write-Host"|| Host: $env: TAILSCALE_IP
+
+||"
+Write-Host"|| Username: runneradmin
+ Write-Host"|| Password: P@ssword!
+Write-Host "
+ Write-Host 'nConnection Instructions:" -ForegroundColom
+Write-Host "1. Install Tailscale on your device (phone,
+
+Write-Host "2. Log in with the same Tailscale account"
+Write-Host "3. Open Remote Desktop app and enter the IP
+ Write-Host "4. Use the provided credentials" -Foreground
+name: Keep Session Alive
+ run: |
+Write-Host "`'n=== SESSION ACTIVE ===" -ForegroundColor C
+ Write-Host "EnigMano RDP instance is now running!" -Fore
+Write-Host "Instance will remain active for up to 6 houm
+Write-Host "Do not close this window to maintain the com
+
+$counter = 0
+ while ($true) {
+
+$counter++
+
+Write-Host "Session active Heartbeat #$counter ($(Ge
+
+$tsStatus = & "C:\Program Files\Tailscale\tailscale.ex
+
+if ($tsStatus -match "active") {  
+Write-Host "Tailscale status: ACTIVE" -ForegroundCo
+
+} else {
+
+Write-Host "Tailscale status: ERROR Restarting...'
+}
+
+& "C:\Program Files\Tailscale\tailscale.exe" up-au
+
+
+
+Start-Sleep -Seconds 60
+}
